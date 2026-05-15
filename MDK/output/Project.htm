@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\output\Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\output\Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Wed May 13 14:31:29 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Fri May 15 12:53:46 2026
 <BR><P>
 <H3>Maximum Stack Usage =       1616 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -904,7 +904,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_adc_init
 </UL>
 
-<P><STRONG><a name="[1]"></a>adc_task</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, adc_app.o(.text.adc_task))
+<P><STRONG><a name="[1]"></a>adc_task</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, adc_app.o(.text.adc_task))
 <BR>[Address Reference Count : 1]<UL><LI> scheduler.o(.data.scheduler_task)
 </UL>
 <P><STRONG><a name="[b5]"></a>app_btn_init</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, btn_app.o(.text.app_btn_init))
@@ -1720,7 +1720,7 @@ Global Symbols
 <LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_task
 </UL>
 
-<P><STRONG><a name="[2]"></a>oled_task</STRONG> (Thumb, 160 bytes, Stack size 48 bytes, oled_app.o(.text.oled_task))
+<P><STRONG><a name="[2]"></a>oled_task</STRONG> (Thumb, 208 bytes, Stack size 48 bytes, oled_app.o(.text.oled_task))
 <BR><BR>[Stack]<UL><LI>Max Depth = 760<LI>Call Chain = oled_task &rArr; oled_printf &rArr; OLED_ShowStr &rArr; OLED_ShowChar &rArr; OLED_Write_data &rArr; I2C_Bus_Reset &rArr; perfc_delay_ms &rArr; __aeabi_ldivmod &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_printf

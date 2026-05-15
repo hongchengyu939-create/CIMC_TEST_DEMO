@@ -30,7 +30,7 @@ uint16_t adc_value[2];
 
 /* DAC 输出缓冲区 */
 uint16_t convertarr[CONVERT_NUM] = {0};
-
+uint16_t voltage_mv;
 /* RTC */
 rtc_parameter_struct rtc_initpara;
 rtc_alarm_struct  rtc_alarm;

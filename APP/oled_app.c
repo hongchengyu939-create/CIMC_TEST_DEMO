@@ -1,15 +1,16 @@
 /* Licence
-* Company: MCUSTUDIO
-* Auther: Ahypnis.
-* Version: V0.10
-* Time: 2025/06/05
-* Note:
-*/
+ * Company: MCUSTUDIO
+ * Auther: Ahypnis.
+ * Version: V0.10
+ * Time: 2025/06/05
+ * Note:
+ */
 
 #include "mcu_cmic_gd32f470vet6.h"
 
 extern uint16_t adc_value[2];
-
+extern uint16_t convertarr[CONVERT_NUM];
+extern uint16_t voltage_mv;
 /**
  * @brief	使用类似printf的方式显示字符串，显示6x8大小的ASCII字符
  * @param x  Character position on the X-axis  range：0 - 127
@@ -33,9 +34,11 @@ int oled_printf(uint8_t x, uint8_t y, const char *format, ...)
 
 void oled_task(void)
 {
-    oled_printf(0, 0, "KEY STA: %d%d%d%d%d%d", KEY1_READ, KEY2_READ, KEY3_READ, KEY4_READ, KEY5_READ, KEY6_READ);
-    oled_printf(0, 1, "uwTick:%lld", (long long)get_system_ms());
-    oled_printf(0, 2, "A0:%u Vref:%u", adc_value[0], adc_value[1]);
+  oled_printf(0, 0, "KEY STA: %d%d%d%d%d%d", KEY1_READ, KEY2_READ, KEY3_READ, KEY4_READ, KEY5_READ, KEY6_READ);
+  oled_printf(0, 1, "uwTick:%lld", (long long)get_system_ms());
+  oled_printf(0, 2, "A0:%u Vref:%u", adc_value[0], adc_value[1]);
+  // A是原始数值，D是伏特（带3位小数）
+  oled_printf(0, 3, "A:%04d  D:%d.%03d V", adc_value[0], voltage_mv / 1000, voltage_mv % 1000);
 }
 
 /* CUSTOM EDIT */

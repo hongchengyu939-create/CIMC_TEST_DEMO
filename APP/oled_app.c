@@ -38,7 +38,7 @@ void oled_task(void)
   oled_printf(0, 1, "uwTick:%lld", (long long)get_system_ms());
   oled_printf(0, 2, "A0:%u Vref:%u", adc_value[0], adc_value[1]);
   // A是原始数值，D是伏特（带3位小数）
-  oled_printf(0, 3, "A:%04d  D:%d.%03d V", adc_value[0], voltage_mv / 1000, voltage_mv % 1000);
+  oled_printf(0, 4, "A:%04d  D:%d.%03d V", adc_value[0], voltage_mv / 1000, voltage_mv % 1000);
 }
 
 /* CUSTOM EDIT */

@@ -1,12 +1,11 @@
 /* Licence
-* Company: MCUSTUDIO
-* Auther: Ahypnis.
-* Version: V0.10
-* Time: 2025/06/05
-* Note:
-*/
+ * Company: MCUSTUDIO
+ * Auther: Ahypnis.
+ * Version: V0.10
+ * Time: 2025/06/05
+ * Note:
+ */
 #include "mcu_cmic_gd32f470vet6.h"
-
 
 extern uint8_t ucLed[6];
 
@@ -78,6 +77,8 @@ void prv_btn_event(struct ebtn_btn *btn, ebtn_evt_t evt)
         {
         case USER_BUTTON_0:
             LED1_TOGGLE;
+						ucLed[0] = !ucLed[0];
+            my_printf(DEBUG_USART, "Button 0 Clicked! ucLed[0] = %d\r\n",ucLed[0]);
             break;
         case USER_BUTTON_1:
             LED2_TOGGLE;

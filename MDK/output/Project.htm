@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\output\Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\output\Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Fri May 15 12:53:46 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Fri May 15 14:22:17 2026
 <BR><P>
 <H3>Maximum Stack Usage =       1616 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1688,6 +1688,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;card_info_get
 <LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_task
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prv_btn_event
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GD30AD3344_Init
 <LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_fatfs_test
 <LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;test_spi_flash
@@ -1830,10 +1831,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_enter_deepsleep
 </UL>
 
-<P><STRONG><a name="[6e]"></a>prv_btn_event</STRONG> (Thumb, 118 bytes, Stack size 0 bytes, btn_app.o(.text.prv_btn_event))
+<P><STRONG><a name="[6e]"></a>prv_btn_event</STRONG> (Thumb, 152 bytes, Stack size 0 bytes, btn_app.o(.text.prv_btn_event))
 <BR><BR>[Stack]<UL><LI>Max Depth = 688<LI>Call Chain = prv_btn_event &rArr; bsp_enter_deepsleep &rArr; bsp_gd30ad3344_init &rArr; GD30AD3344_Init &rArr; my_printf &rArr; vsnprintf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_enter_deepsleep
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> btn_app.o(.text.app_btn_init)
 </UL>
